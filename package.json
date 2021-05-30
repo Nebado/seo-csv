@@ -1,0 +1,24 @@
+{
+    "name": "seo-csv",
+    "version": "0.0.1",
+    "description": "The module of seo data from csv file for meta tags on site",
+    "main": "index.js",
+    "scripts": {
+        "test": "make test",
+        "start": "nodemon src/app.js -e js,hbs"
+    },
+    "keywords": [
+        "seo",
+        "csv",
+        "meta"
+    ],
+    "author": "Ruslan Lazurenko",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "hbs": "^4.1.1",
+        "nodemon": "^2.0.7"
+    }
+}
