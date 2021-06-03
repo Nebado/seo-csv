@@ -5,7 +5,7 @@ This is a very simple seo module for set meta tags from csv file on Nodejs.
 ## Installation
 
 ```console
-    $ npm install seo-csv
+$ npm install seo-csv
 ```
 
 ## Configuration
@@ -13,9 +13,9 @@ This is a very simple seo module for set meta tags from csv file on Nodejs.
 ### CSV file with your seo meta
 
 ```console
-    url;title;description;keywords
-    /;Home;Home;Home
-    /about;About;About;About
+url;title;description;keywords
+/;Home;Home;Home
+/about;About;About;About
 ```
 
 ### Add middleware in your app.js
