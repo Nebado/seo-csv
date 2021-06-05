@@ -10,7 +10,7 @@ $ npm install seo-csv
 
 ## Configuration
 
-### CSV file with your seo meta
+### Your seo.csv file with your seo meta in directory public/.
 
 ```console
 url;title;description;keywords
@@ -28,12 +28,21 @@ app.use(
   })
 );
 
-app.get("/", function (req, res) {
-  res.render("index", {
-    title: req.meta["title"],
-    description: req.meta["description"],
-    keywords: req.meta["keywords"],
-  });
+app.use(function (req, res, next) {
+    res.locals.meta = req.meta;
+    next();
 });
 
+app.get("/", function (req, res) {
+  res.render("index", res.locals.meta);
+});
+
+```
+
+### In view
+
+```html
+<title>{{title}}</title>
+<meta name="description" content="{{description}}" />
+<meta name="keywords" content="{{keywords}}" />
 ```
